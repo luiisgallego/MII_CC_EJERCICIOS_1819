@@ -4,4 +4,4 @@
 
 Instalado NVM para Node.js.
 
-![Versión instalada de NVM](/img/ejercicio1.png)
+![Versión instalada de NVM](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/ejercicio1.png)
