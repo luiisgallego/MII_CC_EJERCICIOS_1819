@@ -5,3 +5,8 @@
 Instalado NVM para Node.js.
 
 ![Versión instalada de NVM](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/ejercicio1.png)
+
+### Ejercicio 2 - Ejecutar un programa básico que trabaje con una base de datos en diferentes versiones del lenguaje. ¿Funciona en todas ellas?
+
+Una vez instalado Node.js y la base de datos mysql he realizado un sencillo programa que podemos ver ![aquí](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/Ejercicio2). Tan solo calcula una sencilla operación dentro de un query que posteriormente es imprimido.
+
