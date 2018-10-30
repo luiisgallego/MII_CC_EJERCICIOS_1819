@@ -17,4 +17,4 @@ Una vez completado este pequeño ejemplo, he pasado a desarrollar la aplicación
 
 El programa construido para la porra lo podemos ver [aquí](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/Porra). Para lanzarlo:
 > node porra.js
-
+Para obtener los resultados hay que dirigirse a [localhost:3000](localhost:3000).
