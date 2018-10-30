@@ -10,3 +10,11 @@ Instalado NVM para Node.js.
 
 Una vez instalado Node.js y la base de datos mysql he realizado un sencillo programa que podemos ver [aquí](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/Ejercicio2). Tan solo calcula una sencilla operación dentro de un query que posteriormente es imprimido.
 
+Una vez completado este pequeño ejemplo, he pasado a desarrollar la aplicación de la Porra. Para ello, primeramente he montado una base de datos en mysql siguiendo el siguiente [tutorial](http://www.oscarabadfolgueira.com/crear-una-base-datos-mysql-desde-consola/). Obteniendo la siguiente tabla y datos:
+
+![Tabla porras](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/ejercicio2_1.png)
+![Datos tabla porras](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/ejercicio2_2.png)
+
+El programa construido para la porra lo podemos ver [aquí](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/Porra). Para lanzarlo:
+node porra.js
+
