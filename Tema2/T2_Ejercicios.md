@@ -16,5 +16,5 @@ Una vez completado este pequeño ejemplo, he pasado a desarrollar la aplicación
 ![Datos tabla porras](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/ejercicio2_2.png)
 
 El programa construido para la porra lo podemos ver [aquí](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/Porra). Para lanzarlo:
-node porra.js
+> node porra.js
 
