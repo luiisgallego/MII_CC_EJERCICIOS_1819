@@ -1,12 +1,12 @@
 {
     "author": "Luis Gallego Quero <lgaq94@gmail.com> (https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819)",
-    "name": "Porra",
-    "description": "Sencilla aplicación de una porra",
+    "name": "Prueba",
+    "description": "Sencilla aplicación de prueba",
     "version": "0.0.1",
     "repository": {
         "url": "git@github.com:luiisgallego/MII_CC_EJERCICIOS_1819.git"
     },
-    "main": "./porra.js",
+    "main": "./index.js",
     "scripts": {},
     "dependencies": {
         "express": "^4.16.4"
