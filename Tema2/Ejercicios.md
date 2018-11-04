@@ -11,3 +11,17 @@ Una vez que nos hemos dado de alta en Heroku, hemos descargado el cliente y nos 
 
 Para la realización de este ejercicio hemos seguido al completo el manual proporcionado por Heroku, llegando a desplegar la aplicación base que nos indican como podemos ver en la siguiente captura:
 ![Despligue de Heroku](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/Ejercicio2_2.png)
+
+### Ejercicio 3 - Realizar una app en express (o el lenguaje y marco elegido) que incluya variables como en el caso anterior.
+
+Una vez probado el ejemplo de la Porra, vamos a realizar un pequeño programa que nos permita insertar nombres de items de cualquier tipo, añadiendo además cantidad y precio. 
+
+Esta sencilla aplicación está fuertemente apoyada en el ejemplo anterior de la Porra, por lo que una vez hecho el PUT del item ejecuentando el siguiente CURL:
+~~~
+curl -X PUT http://127.0.0.1:5000/item/prueba/3/100
+~~~
+
+Obtenemos en el navegador el siguiente resultado:
+
+![Ejercicio3](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/Ejercicio3_1.png)
+
