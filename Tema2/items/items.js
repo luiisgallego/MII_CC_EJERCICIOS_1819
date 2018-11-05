@@ -18,11 +18,6 @@ function vars(){
     return ['nombre', 'cantidad', 'precio'];
 }
 
-function nuevoItem(item){
-    this.items[ID].push(item);
-    ID++;
-}
-
 function getApuestas(){
     return this.items;
 }
@@ -34,3 +29,9 @@ function getID() {
 function creaID(nombre){
     return "ID_" + nombre;
 }
+
+/*function nuevoItem(item){
+    this.items[ID].push(item);
+    ID++;
+}*/
+
