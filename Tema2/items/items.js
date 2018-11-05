@@ -27,6 +27,10 @@ function getApuestas(){
     return this.items;
 }
 
+function getID() {
+    return this.ID;
+}
+
 function creaID(nombre){
     return "ID_" + nombre;
 }
