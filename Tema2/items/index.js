@@ -1,8 +1,15 @@
 var express = require('express');
 var app = express();
+
 var items = require("./items.js");
 
 var almacenItems = new Object;
+
+// Establecemos los requisitos de puerto e IP
+var ip = '127.0.0.1';
+var puerto = 5000;
+app.set('puerto', puerto);
+app.use(express.static(__dirname + '/public'));
 
 // Crea un nuevo item
 app.put('/item/:nombre/:cantidad/:precio', function(req, response){
@@ -29,8 +36,8 @@ app.get('/item/:ID', function(request, response){
 });
 
 // Escucha puerto determinado
-app.listen(5000, function(){
-    console.log("Items app running at 5000.");
+app.listen(app.get('puerto'), ip, function(){
+    console.log("Items app running en " + ip + ":" + app.get('puerto'));
 });
 
 // Exporta la variable para poder hacer tests

@@ -25,3 +25,10 @@ Obtenemos en el navegador el siguiente resultado:
 
 ![Ejercicio3](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/Ejercicio3_1.png)
 
+### Ejercicio 4 - Crear pruebas para las diferentes rutas de la aplicación.
+
+Una vez instalado mocha y should para la realización de los test, hemos definido dichos test, diferenciando entre los correspondientes a la aplicación principal y los definidos para la clase específica de Items. También hemos tenido que modificar package.json, añadiendo las directivas necesarias para una vez ejecutar mocha en el terminal que se ejecuten dichos test. Obteniendo el siguiente resultado:
+
+![Ejercicio4](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/Ejercicio4.png)
+
+
