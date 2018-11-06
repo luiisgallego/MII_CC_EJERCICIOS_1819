@@ -35,6 +35,17 @@ Tan solo se han definido un conjunto pequeño de test a modo de ejemplo para los
 
 ### Ejercicio 5 - Instalar y echar a andar tu primera aplicación en Heroku.
 
+Primeramente hemos instalado todo lo necesario de Heroku. Posteriormente hemos lanzado y desde local hemos ejecutado el siguiente curl:
+
+~~~
+curl -X PUT https://items23.herokuapp.com/item/Caja/5/100
+~~~
+
+Como vemos en la siguiente imagen, el despligue funciona correctamente:
+
+![Ejercicio5](https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819/blob/master/Tema2/img/Ejercicio5.png)
+
+
 
 
 ### Ejercicio 6 - Usar como base la aplicación de ejemplo de heroku y combinarla con la aplicación en node que se ha creado anteriormente. Probarla de forma local con foreman. Al final de cada modificación, los tests tendrán que funcionar correctamente; cuando se pasen los tests, se puede volver a desplegar en heroku.

@@ -29,7 +29,7 @@ app.get('/item/:ID', function(request, response){
     if(!almacenItems[identificador]) {
         response.status(404).send("No existe ID");
     } else {
-        response.status(200).send(almacenItems[identificador].ID);
+        response.status(200).send(almacenItems[identificador].ID);        
     }
 });
 
