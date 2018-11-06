@@ -33,4 +33,12 @@ Una vez instalado mocha y should para la realización de los test, hemos definid
 
 Tan solo se han definido un conjunto pequeño de test a modo de ejemplo para los ejercicios. Estos serán completados para la realización de la práctica.
 
+### Ejercicio 5 - Instalar y echar a andar tu primera aplicación en Heroku.
+
+
+
+### Ejercicio 6 - Usar como base la aplicación de ejemplo de heroku y combinarla con la aplicación en node que se ha creado anteriormente. Probarla de forma local con foreman. Al final de cada modificación, los tests tendrán que funcionar correctamente; cuando se pasen los tests, se puede volver a desplegar en heroku.
+
+
+
 

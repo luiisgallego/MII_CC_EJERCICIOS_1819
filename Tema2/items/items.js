@@ -30,8 +30,3 @@ function creaID(nombre){
     return "ID_" + nombre;
 }
 
-/*function nuevoItem(item){
-    this.items[ID].push(item);
-    ID++;
-}*/
-
