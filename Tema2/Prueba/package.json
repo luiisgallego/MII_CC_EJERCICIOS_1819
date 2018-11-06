@@ -1,0 +1,19 @@
+{
+    "author": "Luis Gallego Quero <lgaq94@gmail.com> (https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819)",
+    "name": "Prueba",
+    "description": "Sencilla aplicación de prueba",
+    "version": "0.0.1",
+    "repository": {
+        "url": "git@github.com:luiisgallego/MII_CC_EJERCICIOS_1819.git"
+    },
+    "main": "./index.js",
+    "scripts": {},
+    "dependencies": {
+        "express": "^4.16.4"
+    },
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": ">=0.8"
+    }
+}
