@@ -1,0 +1,25 @@
+{
+    "author": "Luis Gallego Quero <lgaq94@gmail.com> (https://github.com/luiisgallego/MII_CC_EJERCICIOS_1819)",
+    "name": "items",
+    "description": "Sencilla aplicación de inventario",
+    "version": "0.0.1",
+    "repository": {
+        "url": "git@github.com:luiisgallego/MII_CC_EJERCICIOS_1819.git"
+    },
+    "main": "./index.js",
+    "scripts": {
+        "test": "mocha",
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "^4.16.4",
+        "mocha": "^5.2.0",
+        "should": "^13.2.3",
+        "supertest": "^3.3.0"
+    },
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": ">=0.8"
+    }
+}
