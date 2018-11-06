@@ -5,11 +5,16 @@ var items = require("./items.js");
 
 var almacenItems = new Object;
 
-// Establecemos los requisitos de puerto e IP
-var ip = '127.0.0.1';
+/// Establecemos los requisitos de puerto e IP
+/*var ip = '127.0.0.1';
 var puerto = 5000;
 app.set('puerto', puerto);
+app.use(express.static(__dirname + '/public'));*/
+
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'; 
+app.set('port', (process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 5000));
 app.use(express.static(__dirname + '/public'));
+
 
 // Crea un nuevo item
 app.put('/item/:nombre/:cantidad/:precio', function(req, response){
@@ -36,9 +41,12 @@ app.get('/item/:ID', function(request, response){
 });
 
 // Escucha puerto determinado
-app.listen(app.get('puerto'), ip, function(){
+/*app.listen(app.get('puerto'), ip, function(){
     console.log("Items app running en " + ip + ":" + app.get('puerto'));
-});
+});*/
+app.listen(app.get('port'), server_ip_address, function() {
+    console.log("Node app is running at " + server_ip_address + ":" + app.get('port'));
+  });
 
 // Exporta la variable para poder hacer tests
 module.exports = app;
