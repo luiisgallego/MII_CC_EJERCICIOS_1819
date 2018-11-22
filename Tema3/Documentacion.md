@@ -21,6 +21,16 @@ Aunque realmente la configuración que ha resultado exitosa es [esta](https://un
 ssh USER_MAQUINA_INVITADA@localhost -p 2222
 ~~~
 
+Ya podemos ver como *SSH* funciona, pero de cara a utilizar *Ansible* con facilidad aun hay configuración que realizar. Una de ellas es pasar la clave pública del anfitrion al visitante, para ello:
+~~~
+scp -P 2222 ~/.ssh/id_rsa.pub luis@localhost:~/id_rsa.pub
+~~~
+Además, en la máquina anfitriona tenemos que añadir esta clave, para ello:
+~~~
+mkdir ~/.ssh
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+~~~
+
 Una vez realizado esto, *SSH* debería funcionar con normalidad.
 
 
@@ -35,6 +45,16 @@ Lo segundo importante es comprobar que *Python 3* está operativo, para ello rea
 python3 --version
 ~~~
 
+Quizás sea más conveniente la instación de python2, ya que la máquina anfitriona es el que usa y esta dando error en la anfitriona ya que ubuntu no tiene la misma version de python, por tanto:
+~~~
+sudo apt install python-minimal
+~~~
+
+Muy importante modificar el archivo /etc/sudoers para que al hacer sudo no pida contraseña:
+~~~
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) NOPASSWD: ALL
+~~~
 
 ### Explicacion clase
 
@@ -46,3 +66,10 @@ python3 --version
  - (-y) instala si o si, evita que te pregunte y que se pare pues.
 
  Crear varios playbook, para cada cosa específica, luego alguno más general.
+
+ ### EJECUTAR
+
+~~~
+ansible-playbook -i ansible_hosts -b playbook.yml
+~~~
+
