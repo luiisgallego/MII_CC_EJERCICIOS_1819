@@ -73,3 +73,37 @@ Muy importante modificar el archivo /etc/sudoers para que al hacer sudo no pida 
 ansible-playbook -i ansible_hosts -b playbook.yml
 ~~~
 
+### VAGRANT
+
+El primer paso, como viene siendo lógico, es descargar la tecnología:
+~~~
+https://www.vagrantup.com/downloads.html
+~~~
+
+Después tan solo tenemos que crear un *Vagrantfile*, esto lo podemos hacer manualmente o con el siguiente comando:
+~~~
+vagrant init
+~~~
+
+Ahora ya podemos trabajar con Vagrant, en mi caso voy a crear una maquina virtual de tipo Ubuntu 16.04 llamada xenial64, para ello necesito instalar dicho *box* en mi carpeta. Si dicho box no lo descargamos previamente, vagrant lo hará automaticamente cuando se ejecute su *Vagrantfile*, entonces:
+~~~
+vagrant box add ubuntu/xenial64
+~~~
+ 
+Una vez instalado, ya podemos definir en nuestro *Vagrantfile* todo lo necesario. Una vez definido todo, ejecutamos el siguiente comando y las máquinas virtuales definidas se desplegarán:
+~~~
+vagrant up
+~~~
+Si quieremos eliminar la MV (no la box descargada):
+~~~
+vagrant destroy
+~~~
+
+Llegado a este punto comentar que es simplemente bestial Vagrant, culpa de ello la tiene la sincronización de carpetas entre las maquinas. Al levantar una MV, la carpeta donde reside el *Vagrantfile* se sincroniza completamente con la MV creada, con la de posibilidades que eso ofrece.
+
+## Vagrant - Ansible
+
+Ahora vamos a añadir toda la funcionalidad de Ansible al despligue de Vagrant, si ya hemos desplegado y no queremos volver a hacerlo, podemos usar el siguiente comando para la instalación de Ansible:
+~~~
+vagrant reload --provision
+~~~
