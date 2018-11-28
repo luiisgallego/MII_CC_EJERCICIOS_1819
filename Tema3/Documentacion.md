@@ -1,10 +1,10 @@
 # Provisionamiento en infraestructuras virtuales
 
-De cara al correcto desarrollo del Hito 3, vamos a comenzar los ejercicios por el apartado de *Ansible*.
+De cara al correcto desarrollo del Hito 3, vamos a comenzar los ejercicios por el apartado de *Ansible*. Encontramos dos ejercicios que principalmente lo que buscan es desplegar nuestro proyecto mediante *Ansible* en *Azure*. Para ello primero vamos a realizar el despliegue en local con *Vagrant* y *Ansible* y posteriormente lo realizaremos en *Azure*. 
 
 Los sistemas operativos utilizados van a ser:
 - Anfitrión: Mac OS
-- Invitado: Ubuntu Server 16.04 
+- Invitado: Ubuntu Server 14.04 
 
 ### Instalación necesaria MacOS
 
@@ -34,7 +34,7 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 Una vez realizado esto, *SSH* debería funcionar con normalidad.
 
 
-### Instalacion necesaria Ubuntu Server 16.04
+### Instalacion necesaria Ubuntu Server 14.04
 
 - Maquina: ubuntuCC
 - Usuario: luis
@@ -67,7 +67,7 @@ Muy importante modificar el archivo /etc/sudoers para que al hacer sudo no pida 
 
  Crear varios playbook, para cada cosa específica, luego alguno más general.
 
- ### EJECUTAR
+### EJECUTAR
 
 ~~~
 ansible-playbook -i ansible_hosts -b playbook.yml
@@ -107,3 +107,8 @@ Ahora vamos a añadir toda la funcionalidad de Ansible al despligue de Vagrant, 
 ~~~
 vagrant reload --provision
 ~~~
+
+
+# Azure
+
+Una vez construidas y probadas las herramientas para la virtualización del proyecto en local, llega el momento de desplegarlo en la nube, para ello vamos a usar el servicio proporcionado por Microsoft denominado Azure.

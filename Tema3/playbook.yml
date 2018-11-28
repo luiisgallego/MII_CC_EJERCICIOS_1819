@@ -4,7 +4,7 @@
   gather_facts: False
 
   tasks:
-    - name: Instalar Python 2.
+    - name: Instalar Python 2. 
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
     - name: Instalar Git.
       apt: 
@@ -14,17 +14,21 @@
       git:
         repo: https://github.com/luiisgallego/MII_CC_1819.git
         dest: MII_CC_1819
-    - name: Install build-essential
+    - name: Install build-essential.
       apt: 
         pkg: build-essential
         state: present
-    - name: NodeSource
+    - name: NodeSource.
       shell: curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
     - name: Instalar Node.js        
       apt: 
         pkg: nodejs 
         state: present
-    - name: Express                  
+    - name: Express.                  
       npm: 
         name: express
         global: yes
+    - name: Cambiamos directorio.
+      raw: cd MII_CC_1819
+    - name: Instalar dependencias proyecto.
+      raw: npm install
