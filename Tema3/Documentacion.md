@@ -108,7 +108,42 @@ Ahora vamos a añadir toda la funcionalidad de Ansible al despligue de Vagrant, 
 vagrant reload --provision
 ~~~
 
-
 # Azure
 
-Una vez construidas y probadas las herramientas para la virtualización del proyecto en local, llega el momento de desplegarlo en la nube, para ello vamos a usar el servicio proporcionado por Microsoft denominado Azure.
+Una vez construidas y probadas las herramientas para la virtualización del proyecto en local, llega el momento de desplegarlo en la nube, para ello vamos a usar el servicio proporcionado por *Microsoft* denominado *Azure*. Lo primero que tenemos que hacer es instalar el cliente de *Azure* en nuestra máquina local:
+~~~
+brew update && brew install azure-cli
+~~~
+Si posteriormente hacemos escribimos en la terminal *az login*, se nos redirigirá hasta la página de de Azure para loguearnos, una vez realizado esto, en nuestra terminal podremos encontrar una pequeña información de los clouds que tenemos. 
+
+Bien, azure ya está operativo en nuestro ordenador, ahora, liguemos vagrant a azure. Para ello primero tenemos que instalar el proveedor de Azure en Vagrant:
+~~~
+vagrant plugin install vagrant-azure
+~~~
+Comentar que para estos pasos se están siguiendo los siguientes enlaces, los cuales son similares y explican bastante bien el proceso:
+- [Link1](https://blog.scottlowe.org/2017/12/11/using-vagrant-with-azure/)
+- [Link2](https://github.com/scottslowe/learning-tools/tree/master/vagrant/azure)
+
+Añadimos la caja de Azure para Vagrant:
+~~~
+vagrant box add azure-dummy https://github.com/azure/vagrant-azure/raw/v2.0/dummy.box --provider azure
+~~~
+Ahora creamos un Azure Active Directory (AD) service, importante guardar la info que nos devuelve el JSON:
+~~~
+az ad sp create-for-rbac
+~~~
+Si tenemos varias subscripciones en Azure y queremos cambiar la que nos se nos ha asignado por defecto:
+~~~
+az account set --subscription 'your subscription name'
+~~~
+Ya tenemos Vagrant, el Vagrant-Azure completo, tenemos el servicio ficticio de Azure y hemos creado el servicio principal de Azure AD, podemos comenzar a crear maquinas virtuales. Para ello actualizamos nuestro *Vagrantfile* con los requisitos necesarios de Azure. Importante declarar las variables de entorno en nuestro .bash_profile.
+
+Además, cuando habamos *vagrant up*, al menos en Mac, hay que habilitar la compartición de carpetas locales. Para ello hay que irse a Compartir (Preferencias), para habilitar el compartir archivos y utilizar tu usuario y contraseña del pc anfitrion a la hora de lanzar *vagrant up* (nos lo pedirá la ejecución).
+
+## Error -> vagrant smb_host
+https://www.vagrantup.com/docs/synced-folders/smb.html#smb_host
+
+~~~
+~~~
+~~~
+~~~

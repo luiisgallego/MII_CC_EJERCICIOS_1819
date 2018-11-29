@@ -4,8 +4,10 @@
   gather_facts: False
 
   tasks:
+    - name: Update.
+      shell: sudo apt-get -y update
     - name: Instalar Python 2. 
-      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      raw: test -e /usr/bin/python || apt install -y python-minimal
     - name: Instalar Git.
       apt: 
         pkg: git 

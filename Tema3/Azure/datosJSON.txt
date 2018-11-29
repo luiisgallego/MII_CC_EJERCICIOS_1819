@@ -1,0 +1,10 @@
+{
+  "appId": "454627d1-cdac-4e05-acca-a8d607faba67",
+  "displayName": "azure-cli-2018-11-28-14-38-54",
+  "name": "http://azure-cli-2018-11-28-14-38-54",
+  "password": "43e5b2cc-8131-4f87-abf2-20b2acd71316",
+  "tenant": "2187b440-94a3-4bdb-866e-ac44d1d8c7e6"
+}
+
+
+id_subscripción_en_uso: bd63fbf1-e0cd-4217-9ca4-468c5ef4f265
