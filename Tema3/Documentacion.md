@@ -140,6 +140,31 @@ Ya tenemos Vagrant, el Vagrant-Azure completo, tenemos el servicio ficticio de A
 
 Además, cuando habamos *vagrant up*, al menos en Mac, hay que habilitar la compartición de carpetas locales. Para ello hay que irse a Compartir (Preferencias), para habilitar el compartir archivos y utilizar tu usuario y contraseña del pc anfitrion a la hora de lanzar *vagrant up* (nos lo pedirá la ejecución).
 
+## Azure desde Portal
+
+- Simplemente creamos un recurso con el contenido que necesitemos.
+- Abrimos los puertos HTTP (80) y SSH (22).
+- Una vez construido todo, en la pestaña *Conectar* encontramos la ruta para acceder desde *SSH*.
+
+### Azure - MV DESPLIGUE
+
+Una vez creada nuestra MV, ya podemos utilizar ansible y desplegar, siempre y cuando hayamos modificado nuestro *ansible_hosts* con la info de la MV de Azure. Una vez que eso:
+~~~
+ansible-playbook -i ansible_hosts -b playbook.yml
+~~~
+
+Una vez montado todo, accedemos por *SSH* y creamos la variable de entorno PORT=80 para que asi no fallen los test en *Travis* y podamos usar el puerto 80 en nuestro proyecto: 
+~~~
+export PORT=80
+~~~
+
+Ya tan solo falta ejecutar un *demonio* para que nuestro proyecto corra, para eso usamos el process manager denominado *PM2* ejecutando la siguiente instruccion:
+~~~
+sudo pm2 start index.js
+~~~
+
+Si hasta aquí ha ido todo bien, ya podemos acceder a nuestra aplicación desde curl o desde el navegador desde la MV con *localhost:80/* o desde cualquier otra maquina con *http://ip_maquina:80/*.
+
 ## ERROR -> vagrant smb_host
 https://www.vagrantup.com/docs/synced-folders/smb.html#smb_host
 
