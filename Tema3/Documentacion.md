@@ -140,10 +140,29 @@ Ya tenemos Vagrant, el Vagrant-Azure completo, tenemos el servicio ficticio de A
 
 Además, cuando habamos *vagrant up*, al menos en Mac, hay que habilitar la compartición de carpetas locales. Para ello hay que irse a Compartir (Preferencias), para habilitar el compartir archivos y utilizar tu usuario y contraseña del pc anfitrion a la hora de lanzar *vagrant up* (nos lo pedirá la ejecución).
 
-## Error -> vagrant smb_host
+## ERROR -> vagrant smb_host
 https://www.vagrantup.com/docs/synced-folders/smb.html#smb_host
 
+# AMPLIACIÓN PROYECTO
+
+## MONGO.DB
+
+Lo primero que vamos a realizar es la instalación en MacOS, podemos utilizar el siguiente [enlace](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/):
+Importante descargarse el paquete community edition, y este paquete pegarlo en nuestra carpeta de aplicaciones, por ejemplo. Después añadir la dirección de esta carpeta, concretamente el /bin al bash_profile, ya que mongo requiere esta variable de entorno, llamada *mongo*:
 ~~~
+brew update
+brew install mongodb
+Carpeta para los archivos de mongo:
+mkdir -p /data/db 
+Posiblemente habrá que darle permisos:
+sudo chown -R `id -un` /data/db
+Demonio:
+mongod
+Para abrir una shell de mongo:
+mongo
 ~~~
+
+
+
 ~~~
 ~~~

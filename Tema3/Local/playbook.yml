@@ -34,3 +34,8 @@
       raw: cd MII_CC_1819
     - name: Instalar dependencias proyecto.
       raw: npm install
+    - name: Instalar process manager.
+      npm:
+        name: pm2
+        state: present
+        global: yes
