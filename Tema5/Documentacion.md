@@ -77,3 +77,5 @@ Además, cuando hagamos *vagrant up*, al menos en Mac, hay que habilitar la comp
 
 ## ERROR -> vagrant smb_host
 https://www.vagrantup.com/docs/synced-folders/smb.html#smb_host
+
+Comentar que por defecto vagrant intenta crear un enlace entre la MV y la máquina anfitrión. Por ello nos pide nuestro nombre de usuario y pass, aunque actualmente lo dejo desactivado. Si esta activo, en MAC, hay que eliminar la carpeta compartida que se genera en el apartado Compartir de las Preferencias.

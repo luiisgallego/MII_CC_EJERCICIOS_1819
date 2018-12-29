@@ -6,8 +6,13 @@ require 'vagrant-azure'
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "azure-dummy"    # Azure box dummy
-  config.ssh.private_key_path = '~/.ssh/id_rsa' # Indicamos ruta ssh clave privada
+  config.vm.box = "azure-dummy"                             # Azure box dummy
+  config.ssh.private_key_path = '~/.ssh/id_rsa'             # Indicamos ruta ssh clave privada
+
+  ### ERROR CARPETAS COMPARTIDAS (ELIMINAR O ARREGLAR??)
+  config.vm.synced_folder ".", "/vagrant", disabled: true   # Elimina error de carpetas compartidas(smb_host) 
+  #config.vm.network :private_network, ip: "192.168.1.51"   # No funciona por ahora
+
   
   config.vm.provider "azure" do |az, override|  # Parametros para AZURE 
 
@@ -16,11 +21,16 @@ Vagrant.configure("2") do |config|
     az.client_secret = ENV['AZURE_CLIENT_SECRET'] 
     az.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
 
-    # Datos de la MV
-    az.vm_name = 'ponerNombreWay'
-    az.vm_size = 'Standard_B1s'
-    az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
-    az.resource_group_name = 'ponerNombreRecursosWay'    
+    # Datos para la MV
+    az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest' # Imagen MV
+    az.vm_name = 'ubuntuhito5v3'                                  # Nombre MV
+    az.vm_size = 'Standard_B1s'                                 # Tamaño MV
+    az.resource_group_name = 'Hito5v3'                            # Grupo de recursos
   end
+
+  config.vm.provision "ansible" do |ansible|  # Parametros para Ansible
+    ansible.playbook = "playbook.yml"
+  end
+  
 
 end 
