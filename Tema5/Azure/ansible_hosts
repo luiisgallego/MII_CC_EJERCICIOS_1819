@@ -1,0 +1,2 @@
+[default]
+ubuntuCC ansible_ssh_port=22 ansible_ssh_host=104.211.9.183 ansible_ssh_user=luis ansible_ssh_private_key_file=~/.ssh/id_rsa
