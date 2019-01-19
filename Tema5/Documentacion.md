@@ -75,7 +75,11 @@ Ya tenemos Vagrant, el Vagrant-Azure completo, tenemos el servicio ficticio de A
 
 Además, cuando hagamos *vagrant up*, al menos en Mac, hay que habilitar la compartición de carpetas locales. Para ello hay que irse a Compartir (Preferencias), para habilitar el compartir archivos y utilizar tu usuario y contraseña del pc anfitrion a la hora de lanzar *vagrant up* (nos lo pedirá la ejecución).
 
-## ERROR -> vagrant smb_host
-https://www.vagrantup.com/docs/synced-folders/smb.html#smb_host
+## Error de carpeta compartida -> vagrant smb_host
 
-Comentar que por defecto vagrant intenta crear un enlace entre la MV y la máquina anfitrión. Por ello nos pide nuestro nombre de usuario y pass, aunque actualmente lo dejo desactivado. Si esta activo, en MAC, hay que eliminar la carpeta compartida que se genera en el apartado Compartir de las Preferencias.
+Comentar que por defecto vagrant intenta crear un enlace entre la MV y la máquina anfitrión. Si esta activo, en MAC, nos pide nuestro nombre de usuario y pass, además  hay que eliminar la carpeta compartida que se genera en el apartado *Compartir* de las *Preferencias* cada vez que intentamos crear nuevas máquinas virtuales.
+
+Se ha intentando solucionar, pero con tal sistema operativo anfitrión, la nube de problemas ha sido grande, además de la molestia de tener que introduccir nombre de usuario y contraseña para cada máquina en cada ocasión. Tampoco ha sido de utilidad el uso de la carpeta compartida, por lo que se ha decidido prescindir de dicha carpeta compartida con la siguiente línea en el *Vagrantfile*:
+~~~
+config.vm.synced_folder ".", "/vagrant", disabled: true
+~~~
