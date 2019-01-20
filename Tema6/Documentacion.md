@@ -40,13 +40,23 @@ Comandos interesantes:
     ~~~
     docker run -it nombreImagen sh
     ~~~
-- 
+
+
+### DOCKERFILE
+
+Pasos para construir un contenedor con un dockerfile. Primero definimos el dockerfile y luego:
+
+- Crear imagen: (importante el punto final)
     ~~~
-    
+    docker build -t luiisgallego/pruebaejercicios .
     ~~~
-- 
+- Ahora podemos ejecutar el contenedor con:
     ~~~
-    
+    docker run --rm -t luiisgallego/pruebaejercicios
+    ~~~
+- En el caso de que no tengamos un ejecutable y queramos simplemente inspeccionar el contenedor:
+    ~~~
+    docker run -it luiisgallego/pruebaejercicios sh
     ~~~
 
 
