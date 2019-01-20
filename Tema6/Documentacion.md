@@ -66,18 +66,18 @@ Vamos a probar con el ejemplo que se nos proporciona:
 ~~~
 sudo  sudo docker run --rm jjmerelo/docker-daleksay -f smiling-octopus Uso argumentos, ea 
 ~~~
-![1_ejercicio4_1](../images/1_ejercicio4_1.png)
+![1_ejercicio4_1](images/1_ejercicio4_1.png)
 
 Una vez que hemos visto como se instala y se ejecuta, vamos a probar una segunda vez con otro texto:
 ~~~
 sudo  sudo docker run --rm jjmerelo/docker-daleksay -f smiling-octopus Realizo ejercicio 4 
 ~~~
-![2_ejercicio4_2](../images/1_ejercicio4_2.png)
+![2_ejercicio4_2](images/1_ejercicio4_2.png)
 
 ### Ejercicio 5 -Comparar el tamaño de las imágenes de diferentes sistemas operativos base, Fedora, CentOS y Alpine, por ejemplo.
 
 Se ha instalado fedora, ubuntu y alpine, siendo la primera la que más espacio ocupa:
-![3_ejercicio5](../images/3_ejercicio5.png)
+![3_ejercicio5](images/3_ejercicio5.png)
 
 ### Ejercicio 6 - Crear a partir del contenedor anterior una imagen persistente con commit.
 
@@ -95,7 +95,7 @@ Pasos que se han realizado:
     ~~~
     docker images
     ~~~
-![4_ejercicio6](../images/4_ejercicio6.png)
+![4_ejercicio6](images/4_ejercicio6.png)
 
 Luego se ha intentado realizar un push hasta el repositorio, aunque con éxito, no tengo claro que haya sido correctamente. Para ello, una vez logueados correctamente en la página de docker:
 ~~~
