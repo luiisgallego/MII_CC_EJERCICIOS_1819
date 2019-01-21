@@ -40,7 +40,14 @@ Comandos interesantes:
     ~~~
     docker run -it nombreImagen sh
     ~~~
-
+-  Eliminar todos los contenedores:
+    ~~~
+    docker rm $(docker ps -a -q)
+    ~~~
+- Eliminar todas las imagenes:
+    ~~~
+    docker rmi $(docker images -q)
+    ~~~
 
 ### DOCKERFILE
 
@@ -58,8 +65,10 @@ Pasos para construir un contenedor con un dockerfile. Primero definimos el docke
     ~~~
     docker run -it luiisgallego/pruebaejercicios sh
     ~~~
-
-
+- 
+    ~~~
+    
+    ~~~
 
 
 
