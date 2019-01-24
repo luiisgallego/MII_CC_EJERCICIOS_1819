@@ -81,7 +81,7 @@ Una vez que hemos visto como se instala y se ejecuta, vamos a probar una segunda
 ~~~
 sudo  sudo docker run --rm jjmerelo/docker-daleksay -f smiling-octopus Realizo ejercicio 4 
 ~~~
-![2_ejercicio4_2](images/1_ejercicio4_2.png)
+![2_ejercicio4_2](images/2_ejercicio4_2.png)
 
 ### Ejercicio 5 -Comparar el tamaño de las imágenes de diferentes sistemas operativos base, Fedora, CentOS y Alpine, por ejemplo.
 
