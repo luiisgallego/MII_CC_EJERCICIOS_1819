@@ -4,13 +4,13 @@
 
 Como es ya tradición el primer paso es descargar el instalador para Mac OS. Podemos hacerlo [aquí](https://hub.docker.com/editions/community/docker-ce-desktop-mac).
 
-Una vez que lo hemos instalado y nos hemos logueado la aplicación nos indicará que se ha completdo, podemos comprobar desde terminal que todo está OK con el siguiente comando:
+Una vez que lo hemos instalado y nos hemos logueado la aplicación nos indicará que se ha completado, podemos comprobar desde terminal que todo está OK con el siguiente comando:
 ~~~
 docker version
 docker run hello-world
 ~~~
 
-Comandos interesantes:
+### Comandos interesantes:
 
 - Listar las imágenes que tengo:
     ~~~
@@ -51,7 +51,7 @@ Comandos interesantes:
 
 ### DOCKERFILE
 
-Pasos para construir un contenedor con un dockerfile. Primero definimos el dockerfile y luego:
+Pasos para construir un dockerfile. Primero lo definimos y luego:
 
 - Crear imagen: (importante el punto final)
     ~~~
@@ -65,16 +65,6 @@ Pasos para construir un contenedor con un dockerfile. Primero definimos el docke
     ~~~
     docker run -it luiisgallego/pruebaejercicios sh
     ~~~
-- 
-    ~~~
-    
-    ~~~
-
-
-
-
-
-
 
 
 ## Ejercicios
@@ -102,11 +92,11 @@ Se ha instalado fedora, ubuntu y alpine, siendo la primera la que más espacio o
 
 Pasos que se han realizado:
 
-- Se ha creado un interprete de ordenes sobre la imagen de ubuntu:
+- Se ha creado un intérprete de órdenes sobre la imagen de ubuntu:
     ~~~
     docker run -it ubuntu /bin/bash
     ~~~
-- Una vez que hacemos exit, usamos *docker ps -l* para ver el ID, tambien podemos hacer *docker inspect ubuntu* y asi ver la info al completo. Una vez que sabemos el ID hacemos:
+- Una vez que hacemos exit, usamos *docker ps -l* para ver el ID, tambien podemos hacer *docker inspect ubuntu* y asi ver la información al completo. Una vez que sabemos el ID hacemos:
     ~~~
     docker commit ID nombreImagenNueva
     ~~~
@@ -146,6 +136,3 @@ Se ha seguido principalmente el ejemplo de la documentacion:
     docker run -it --rm -v benchmark:/app fedora sh /app/bm.sh
     docker run -it --rm -v benchmark:/app alpine sh /app/bm.sh
     ~~~
-
-
-
